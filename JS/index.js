@@ -48,18 +48,28 @@ function vaciarCarrito() {
 
 function buscarProducto() {
     const input = document.getElementById('buscarInput').value.toLowerCase();
+    buscarProductoDesdeInput(input);
+}
+
+function buscarProductoDesdeInput(input) {
     const productos = document.querySelectorAll('.producto');
     
     productos.forEach(producto => {
-        producto.style.display = producto.getAttribute('data-nombre').toLowerCase().includes(input) ? 'block' : 'none';
+        producto.style.display = producto.getAttribute('nombre_producto').toLowerCase().includes(input) ? 'block' : 'none';
     });
 }
 
+document.getElementById('buscarInput').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        buscarProducto();
+    }
+});
+
 function agregarEfectosAItems() {
-    const itemsLista = document.querySelectorAll('#productos .producto, #carrito-items li');
+    const itemsLista = document.querySelectorAll('#carrito-items li');
     
     itemsLista.forEach(item => {
-        item.addEventListener('mouseenter', () => item.style.backgroundColor = '#ffe0b2');
+        item.addEventListener('mouseenter', () => item.style.backgroundColor = '#8b8b8b');
         item.addEventListener('mouseleave', () => item.style.backgroundColor = '#fff');
     });
 
@@ -79,14 +89,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const footer = document.querySelector('footer');
 
     const botones = [
-        { texto: 'Contar ítems', accion: () => {
-            const items = document.querySelectorAll('#carrito-items li');
-            alert(`Número total de ítems: ${items.length}`);
-        }},
-        { texto: 'Mostrar todos los ítems', accion: () => {
+        { texto: 'Lista de productos', accion: () => {
             const items = document.querySelectorAll('#carrito-items li');
             const todosItems = Array.from(items).map(item => item.textContent);
-            alert(todosItems.length > 0 ? `Lista de todos los ítems:\n${todosItems.join('\n')}` : 'La lista está vacía.');
+            alert(todosItems.length > 0 ? `Lista de todos los ítems:\n${todosItems.join('\n')}` : 'No hay ningun producto en la lista');
         }}
     ];
 

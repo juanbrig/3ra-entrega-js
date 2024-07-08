@@ -10,42 +10,60 @@
     <header>
         <h1>Muebles</h1>
         <div class="search-container">
-            <input type="text" id="buscarInput" placeholder="Buscar productos...">
+            <input type="text" id="buscarInput" placeholder="Buscar productos">
             <button onclick="buscarProducto()">Buscar</button>
         </div>
     </header>
     
     <main>
         <section id="productos">
-            <div class="producto" data-nombre="Heladera">
-                <img src="/heladera java.png" alt="Heladera">
-                <h2>Heladera</h2>
-                <p>Precio: $500</p>
-                <button onclick="agregarAlCarrito('Heladera', 500)">Agregar al Carrito</button>
+            <div class="producto" nombre_producto="Cama 1 Pl Serie 5 Blanco">
+                <img src="./img/Camas/Cama 1 Pl Serie 5 Blanco.jpg" alt="Cama 1 Pl Serie 5 Blanco">
+                <h2>Cama 1 Pl Serie 5 Blanco</h2>
+                <p>$143.000</p>
+                <button onclick="agregarAlCarrito('Cama 1 Pl Serie 5 Blanco', 143000)">Agregar al Carrito</button>
             </div>
-            <div class="producto" data-nombre="Lavadora">
-                <img src="/platos.png" alt="Lavadora">
-                <h2>Lavadora</h2>
-                <p>Precio: $300</p>
-                <button onclick="agregarAlCarrito('Lavadora', 300)">Agregar al Carrito</button>
+            <div class="producto" nombre_producto="Cama 2 Plazas C141 Blanco">
+                <img src="./img/Camas/Cama 2 Plazas C141 Blanco.jpg" alt="Cama 2 Plazas C141 Blanco">
+                <h2>Cama 2 Plazas C141 Blanco</h2>
+                <p>$299.999</p>
+                <button onclick="agregarAlCarrito('Cama 2 Plazas C141 Blanco', 299999)">Agregar al Carrito</button>
             </div>
-            <div class="producto" data-nombre="Microondas">
-                <img src="/micro 2.png" alt="Microondas">
-                <h2>Microondas</h2>
-                <p>Precio: $100</p>
-                <button onclick="agregarAlCarrito('Microondas', 100)">Agregar al Carrito</button>
+            <div class="producto" nombre_producto="Cama Box EMC Queen">
+                <img src="./img/Camas/Cama Box EMC Queen con 6 Cajones y 2 Zapateros Venezia.jpg" alt="Cama Box EMC Queen con 6 Cajones y 2 Zapateros Venezia.jpg">
+                <h2>Cama Box EMC Queen con 6 Cajones y 2 Zapateros Venezia</h2>
+                <p>$695.000</p>
+                <button onclick="agregarAlCarrito('Cama Box EMC Queen con 6 Cajones y 2 Zapateros Venezia', 695000)">Agregar al Carrito</button>
             </div>
-            <div class="producto" data-nombre="Tostadora">
-                <img src="/tostadora 2.png" alt="Tostadora">
-                <h2>Tostadora</h2>
-                <p>Precio: $50</p>
-                <button onclick="agregarAlCarrito('Tostadora', 50)">Agregar al Carrito</button>
+            <div class="producto" nombre_producto="Mesa Comedor Nordica">
+                <img src="./img/Mesas/Mesa Comedor Nordica 120x70.jpg" alt="Mesa Comedor Nordica">
+                <h2>Mesa Comedor Nordica 120x70</h2>
+                <p>$54.300</p>
+                <button onclick="agregarAlCarrito('Mesa Comedor Nordica', 54300)">Agregar al Carrito</button>
             </div>
-            <div class="producto" data-nombre="Licuadora">
-                <img src="/licuadora2.png" alt="Licuadora">
-                <h2>Licuadora</h2>
-                <p>Precio: $70</p>
-                <button onclick="agregarAlCarrito('Licuadora', 70)">Agregar al Carrito</button>
+            <div class="producto" nombre_producto="Mesa comedor Redonda nordica">
+                <img src="./img/Mesas/Mesa comedor Redonda nordica.jpg" alt="Mesa comedor Redonda nordica">
+                <h2>Mesa comedor Redonda nordica</h2>
+                <p>$70.300</p>
+                <button onclick="agregarAlCarrito('Mesa comedor Redonda nordica', 70300)">Agregar al Carrito</button>
+            </div>
+            <div class="producto" nombre_producto="Silla de Escritorio Alta">
+                <img src="./img/Sillas/Silla de Escritorio Alta.jpg" alt="Silla de Escritorio Alta">
+                <h2>Silla de Escritorio Alta</h2>
+                <p>$99.999</p>
+                <button onclick="agregarAlCarrito('Silla de Escritorio Alta', 99999)">Agregar al Carrito</button>
+            </div>
+            <div class="producto" nombre_producto="Silla de Escritorio Ergonómica con Apoya Brazo">
+                <img src="./img/Sillas/Silla de Escritorio Ergonómica con Apoya Brazo.jpg" alt="Silla de Escritorio Ergonómica con Apoya Brazo">
+                <h2>Silla de Escritorio Ergonómica con Apoya Brazo</h2>
+                <p>$79.999</p>
+                <button onclick="agregarAlCarrito('Silla de Escritorio Ergonómica con Apoya Brazo', 79999)">Agregar al Carrito</button>
+            </div>
+            <div class="producto" nombre_producto="Sillón Ergonomica Oficina Escritorio Smart Tech WS6119">
+                <img src="./img/Sillas/Sillón Ergonomica Oficina Escritorio Smart Tech WS6119.jpg" alt="Sillón Ergonomica Oficina Escritorio Smart Tech WS6119">
+                <h2>Sillón Ergonomica Oficina Escritorio Smart Tech WS6119</h2>
+                <p>$319.999</p>
+                <button onclick="agregarAlCarrito('Sillón Ergonomica Oficina Escritorio Smart Tech WS6119', 319999)">Agregar al Carrito</button>
             </div>
         </section>
 
@@ -55,14 +73,11 @@
             <p>Total: $<span id="total">0</span></p>
             <button onclick="vaciarCarrito()">Vaciar Carrito</button>
         </section>
-
-        <p id="mensajeVacio">La lista está vacía.</p>
     </main>
 
     <footer>
-        <p>&copy; 2024 Compra y Venta de Electrodomésticos</p>
     </footer>
 
-    <script src="./JS/main.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>
