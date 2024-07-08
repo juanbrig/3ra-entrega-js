@@ -1,41 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@100..900&family=Kaisei+Opti&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
 }
 
 header {
-    background-color: #ff9800;
+    background-color: #000000;
     color: white;
     text-align: center;
-    padding: 1em 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    font-family: "Libre Bodoni", serif;
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .search-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 1em;
+    align-content: center;
 }
 
 .search-container input {
-    padding: 0.5em;
     font-size: 1em;
-    border: 2px solid #ff9800;
+    border: .125rem solid #000000;
     border-radius: 5px;
     outline: none;
-    margin-right: 0.5em;
+    height: 1.8125rem;
 }
 
 .search-container button {
     padding: 0.5em 1em;
-    background-color: #ff9800;
+    background-color: #000000;
     border: none;
     color: white;
     cursor: pointer;
     font-size: 1em;
     border-radius: 5px;
+    height: 40px;
 }
 
 main {
@@ -43,31 +51,34 @@ main {
 }
 
 #productos {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     flex-wrap: wrap;
+    gap: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    transition: grid-template-columns 0.5s ease;
     justify-content: space-around;
 }
 
-.producto {
-    border: 2px solid #ff9800;
+.producto {border: .125rem solid #000000;
     border-radius: 10px;
     padding: 1em;
     margin: 1em;
     text-align: center;
     flex: 1 0 30%;
-    max-width: 30%;
-    background-color: #fff;
+    max-width: 90%;
 }
 
 .producto img {
     max-width: 100%;
     height: auto;
-    border-bottom: 2px solid #ff9800;
+    border-bottom: .125rem solid #000000;
     margin-bottom: 1em;
 }
 
 button {
-    background-color: #ff9800;
+    background-color: #000000;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -76,11 +87,11 @@ button {
 }
 
 button:hover {
-    background-color: #e68900;
+    background-color: #8b8b8b;
 }
 
 #carrito {
-    border: 2px solid #ff9800;
+    border: .125rem solid #000000;
     border-radius: 10px;
     padding: 1em;
     margin: 1em;
@@ -95,34 +106,14 @@ button:hover {
 
 #carrito li {
     margin: 0.5em 0;
-    background-color: #ffccbc;
+    background-color: #494949;
     padding: 0.5em;
     border-radius: 5px;
 }
 
 footer {
-    background-color: #ff9800;
+    background-color: #000000;
     color: white;
     text-align: center;
     padding: 1em 0;
-}
-
-#emptyMessage {
-    text-align: center;
-    color: #333;
-    display: none;
-}
-
-@media (max-width: 768px) {
-    .producto {
-        flex: 1 0 45%;
-        max-width: 45%;
-    }
-}
-
-@media (max-width: 480px) {
-    .producto {
-        flex: 1 0 100%;
-        max-width: 100%;
-    }
 }
